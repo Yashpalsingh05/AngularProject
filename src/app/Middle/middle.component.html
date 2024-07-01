@@ -1,0 +1,30 @@
+
+<div class="container">
+
+<sidebar-app [product]="sidebarList" (likedButton)="handleLike()"></sidebar-app>
+<app-search-component></app-search-component>
+@for(item of cards; track $index ){
+    
+    <div class="middle-component">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.title}}</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{item.paragraph}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="likebutton(item.title)">LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+}
+      
+
+</div>
