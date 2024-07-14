@@ -1,7 +1,11 @@
-<div class="sidebar">
-    @for(items of product; track $index){
-    <nav class="navbar">
-      <span class="navbar-item">{{ product[items.id].title}}</span>
-    </nav>
-}
+<aside class="bg-stone-300	flex h-full w-52">
+  <ul class="p-3 text-amber-950">
+    <div class="flex justify-center items-center flex-col	">
+    <span [routerLink]="'/'" routerLinkActive=" p-4 text-white rounded  duration-500 ease-in-out bg-slate-500" [routerLinkActiveOptions]="{exact: true}" class="m-8 cursor-pointer">All Task</span>
+    <span [routerLink]="'/important'"  routerLinkActive=" p-4 text-white rounded  duration-500  bg-slate-500"class="m-8 cursor-pointer"class="m-8 cursor-pointer">Important</span>
+    <span [routerLink]="'/inprogress'" routerLinkActive=" p-4 text-white rounded  duration-500 bg-slate-500"class="m-8 cursor-pointer"class="m-8 cursor-pointer">In Progress</span>
+    <span [routerLink]="'/completed'" routerLinkActive=" p-4 text-white rounded  duration-500  bg-slate-500"class="m-8 cursor-pointer"class="m-8 cursor-pointer">Completed</span>
   </div>
+  </ul>
+
+  </aside>

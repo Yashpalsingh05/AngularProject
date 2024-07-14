@@ -1,11 +1,9 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{html,ts}', // Adjust this to your project's structure
+    "./src/**/*.{html,ts}", // Include all your Angular templates and components
   ],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-

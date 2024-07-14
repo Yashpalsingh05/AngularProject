@@ -1,0 +1,28 @@
+<!-- <app-pageheader></app-pageheader>
+<div class=" flex justify-center flex-col ml-96">
+    
+<app-tasklist [taskList]="tasklist"></app-tasklist>
+
+</div> -->
+<app-pageheader></app-pageheader>
+<div class="mt-3 ml-96 ">
+    <input type="text" class="h-12 p-4 w-96 mb-8  box-border border-2 rounded-md focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-pink-500" placeholder="Add Your Task"
+     [(ngModel)]="newtask"
+    (keydown.enter)="addTask()"
+    >
+    <mat-icon aria-hidden="false" aria-label="Example add icon" fontIcon="add" class="absolute mt-2 ml-2 cursor-pointer" (click)="addTask()"></mat-icon>
+
+</div>
+
+<app-tasklist [taskList]="tasklist" (completed)="onCompleted($event)" (important)="onImportant($event)" (delete)="onDelete($event)" (progress)="Onprogress($event)"></app-tasklist>
+@if(initialTasklist.length!= 0){
+}
+@else{
+    <div class="flex ml-80 items-center flex-col  justify-center">
+        <div class="bird-container relative">
+          <img src="https://media4.giphy.com/media/cFdHXXm5GhJsc/200.webp?cid=ecf05e47duett03eio0lrtdityqnijxr4n6fggeyrwmrxs6f&ep=v1_gifs_search&rid=200.webp&ct=g" alt="Running Bird" class="w-36 h-auto">
+        </div>
+        <span class="text-2xl mt-5 ml-14 text-gray-800">No Task Added, Please Add Task</span>
+      </div>
+   
+}
